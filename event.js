@@ -39,4 +39,3 @@ function removeEvent(el, type, listener, useCapture) {
         el.detachEvent('on'+type, el[type+listener]);
     }
 }
-
