@@ -19,10 +19,10 @@ function addEvent(el, type, listener, useCapture) {
             // 修正事件对象的target/currentTarget/preventDefault()/stopPropagation()
             e = window.event;
             e.target = e.srcElement;
-            e.currentTarget = this;
+            e.currentTarget = el;
             e.preventDefault = function() { e.returnValue = false; };
             e.stopPropagation = function() { e.cancelBubble = true; };
-            listener(e);
+            listener.call(el, e);
         };
         el.attachEvent('on'+type, el[type+listener]);
     }

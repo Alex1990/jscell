@@ -5,18 +5,18 @@
 // 元素相对页面左上角的横向像素值
 function pageX(el) {
     var x = 0;
-    while (el = el.parentNode) {
+    do {
         x += el.offsetLeft;
-    }
+    } while (el = el.offsetParent)
     return x;
 }
 
 // 元素相对页面左上角的纵向像素值
 function pageY(el) {
     var y = 0;
-    while (el = el.parentNode) {
+    do {
         x += el.offsetTop;
-    }
+    } while (el = el.offsetParent)
     return y;
 }
 
