@@ -6,10 +6,13 @@
  * | |_| | | |  __/ | | |
  *  \__|_| |_|\___|_| |_|
  *
- * A promiseA+ implementation for learning
+ * A promiseA+ implementation for learning.
  *
  * Specification: https://promisesaplus.com/
  * Tests: https://github.com/promises-aplus/promises-tests
+ *
+ * Using `setImmediate` can improve the performance.
+ * https://github.com/YuzuJS/setImmediate
  */
 
 var arraySlice = Array.prototype.slice;
