@@ -15,7 +15,7 @@ function pageX(el) {
 function pageY(el) {
     var y = 0;
     do {
-        x += el.offsetTop;
+        y += el.offsetTop;
     } while (el = el.offsetParent)
     return y;
 }
